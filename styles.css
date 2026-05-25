@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Visita a León - Alumno X</title>
+    <style>
+        /* Color de fondo basado en la bandera de León (Púrpura/Carmesí) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #7A1C47;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 3px solid #d4af37; /* Detalle en oro, como el león de la bandera */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #7A1C47;
+            border-bottom: 2px solid #7A1C47;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Sección de Monumentos */
+        .monumento-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .monumento-card h3 {
+            color: #7A1C47;
+            margin-top: 0;
+        }
+
+        /* Enlaces y Botones */
+        .btn-enlace {
+            display: inline-block;
+            background-color: #7A1C47;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-enlace:hover {
+            background-color: #d4af37;
+            color: #7A1C47;
+        }
+
+        /* Sección de Enlaces de Interés */
+        .enlaces-interes {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .enlaces-interes ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .enlaces-interes li {
+            margin-bottom: 0.8rem;
+        }
+
+        .enlaces-interes a {
+            color: #7A1C47;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .enlaces-interes a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
