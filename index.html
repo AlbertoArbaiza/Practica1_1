@@ -1,46 +1,266 @@
-<header>
-        <h1>Mi Viaje a León</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de León - Alumno X</title>
+    <style>
+        /* Estilos Globales inspirados en la Bandera de León y Booking */
+        :root {
+            --color-leon: #B10C43; /* El carmesí de la bandera de León */
+            --color-booking-blue: #003580; /* El azul clásico de Booking para contraste */
+            --bg-light: #f5f5f5;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-leon); /* Fondo con el color de la bandera */
+            color: var(--text-dark);
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--color-leon);
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+            border-bottom: 3px solid #ffffff;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        /* Contenedor de Monumentos (Estilo Tarjetas de Booking) */
+        .monumentos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-link {
+            display: block;
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card-img-link:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Badge estilo Booking (Puntuación/Recomendado) */
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--color-booking-blue);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px 0;
+            color: #000;
+            font-size: 1.4rem;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #4f4f4f;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-booking {
+            display: inline-block;
+            background-color: var(--color-booking-blue);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-booking:hover {
+            background-color: #002252;
+        }
+
+        /* Sección de Otros Enlaces de Interés */
+        .enlaces-interes {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .enlaces-interes h3 {
+            margin-top: 0;
+            color: var(--color-leon);
+        }
+
+        .lista-enlaces {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .lista-enlaces a {
+            color: var(--color-booking-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .lista-enlaces a:hover {
+            text-decoration: underline;
+        }
+
+        .lista-enlaces a::before {
+            content: "📍";
+            margin-right: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Guía de Viaje a León</h1>
         <p>Organizado por: Alumno X</p>
     </header>
 
     <main>
-        <section class="intro">
-            <h2>¡Próxima parada: León!</h2>
-            <p>Esta página web está diseñada para recopilar los tres monumentos imprescindibles que voy a visitar en mi próximo viaje a León, una ciudad llena de arte, historia y rincones mágicos.</p>
-        </section>
+        <h2>🏛️ Mis 3 Monumentos Imprescindibles</h2>
+        
+        <div class="monumentos-container">
+            
+            <!-- Tarjeta 1: La Catedral -->
+            <div class="card">
+                <a href="https://www.catedraldeleon.org/" target="_blank" class="card-img-link">
+                    <span class="badge">9.8 · Imprescindible</span>
+                    <!-- Imagen de marcador de posición (puedes cambiarla por una URL de imagen real) -->
+                    <img src="https://images.unsplash.com/photo-1620843116174-88484197e44f?auto=format&fit=crop&w=600&q=80" alt="Catedral de León">
+                </a>
+                <div class="card-content">
+                    <h3>Catedral de León</h3>
+                    <p>Conocida como la 'Pulchra Leonina', es una obra maestra del estilo gótico. Sus vidrieras medievales son de las más espectaculares del mundo, inundando el interior de una luz mágica.</p>
+                    <a href="https://www.catedraldeleon.org/" target="_blank" class="btn-booking">Ver disponibilidad y web oficial</a>
+                </div>
+            </div>
 
-        <section class="monumento-card">
-            <h3>1. Catedral de León (Pulchra Leonina)</h3>
-            <p>Conocida por tener una de las colecciones de vidrieras medievales más importantes del mundo. Su estilo gótico refinado hace que la luz interior sea un auténtico espectáculo visual.</p>
-            <a href="https://www.catedraldeleon.org/" target="_blank" class="btn-enlace">Web Oficial de la Catedral</a>
-        </section>
+            <!-- Tarjeta 2: San Isidoro -->
+            <div class="card">
+                <a href="https://www.museosanisidorodeleon.com/" target="_blank" class="card-img-link">
+                    <span class="badge">9.6 · Excelente</span>
+                    <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=80" alt="Basílica de San Isidoro">
+                </a>
+                <div class="card-content">
+                    <h3>Basílica de San Isidoro</h3>
+                    <p>Este templo románico alberga el Panteón Real, considerado la "Capilla Sixtina del Románico" debido a sus frescos del siglo XII asombrosamente bien conservados.</p>
+                    <a href="https://www.museosanisidorodeleon.com/" target="_blank" class="btn-booking">Reservar visita al Museo</a>
+                </div>
+            </div>
 
-        <section class="monumento-card">
-            <h3>2. Basílica de San Isidoro</h3>
-            <p>Uno de los conjuntos arquitectónicos de estilo románico más importantes de España. En su interior alberga el Panteón Real, a menudo denominado la "Capilla Sixtina del Románico" por sus impresionantes frescos.</p>
-            <a href="https://www.sanisidorodeleon.com/" target="_blank" class="btn-enlace">Web Oficial de San Isidoro</a>
-        </section>
+            <!-- Tarjeta 3: Casa Botines -->
+            <div class="card">
+                <a href="https://www.casabotines.es/" target="_blank" class="card-img-link">
+                    <span class="badge">9.4 · Muy top</span>
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80" alt="Casa Botines de Gaudí">
+                </a>
+                <div class="card-content">
+                    <h3>Casa Botines</h3>
+                    <p>Un impresionante palacio de estilo modernista diseñado por el célebre arquitecto Antoni Gaudí. Es una de las tres únicas obras que el genio construyó fuera de Cataluña.</p>
+                    <a href="https://www.casabotines.es/" target="_blank" class="btn-booking">Consultar entradas y horarios</a>
+                </div>
+            </div>
 
-        <section class="monumento-card">
-            <h3>3. Casa Botines (Gaudí)</h3>
-            <p>Una de las pocas obras que el genial arquitecto Antoni Gaudí construyó fuera de Cataluña. Este palacio de aspecto neogótico e inspiraciones medievales es una joya modernista en pleno corazón de la ciudad.</p>
-            <a href="https://www.casabotines.es/" target="_blank" class="btn-enlace">Web Oficial de Casa Botines</a>
-        </section>
+        </div>
 
-        <section class="enlaces-interes">
-            <h2>Otros Sitios de Interés Turístico</h2>
-            <p>Para exprimir al máximo la visita, también tengo en el radar estos lugares y recursos:</p>
-            <ul>
-                <li>📍 <a href="https://www.turismoleon.org/" target="_blank">Portal Oficial de Turismo de León</a> - Información general y guías.</li>
-                <li>🍷 <a href="https://www.turismoleon.org/turismo/barrio-humedo.php" target="_blank">El Barrio Húmedo y Barrio Romántico</a> - Las zonas imprescindibles para tapear.</li>
-                <li>🖼️ <a href="https://musac.es/" target="_blank">MUSAC</a> - Museo de Arte Contemporáneo de Castilla y León, famoso por su fachada de colores.</li>
-                <li>🏢 <a href="https://www.parador.es/es/paradores/parador-de-leon" target="_blank">Hostal de San Marcos</a> - Impresionante joya del plateresco español (actual Parador).</li>
+        <h2>🌍 Otros sitios de interés turístico</h2>
+        <div class="enlaces-interes">
+            <h3>Enlaces recomendados para tu estancia</h3>
+            <ul class="lista-enlaces">
+                <li><a href="https://www.turismoleon.org/" target="_blank">Turismo Oficial de León</a></li>
+                <li><a href="https://www.turismocastillayleon.com/" target="_blank">Portal de Turismo de CyL</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Barrio_H%C3%BAmedo" target="_blank">Guía del Barrio Húmedo (Tapas)</a></li>
+                <li><a href="https://www.musac.es/" target="_blank">MUSAC (Arte Contemporáneo)</a></li>
+                <li><a href="https://www.parador.es/es/paradores/parador-de-leon" target="_blank">Hostal de San Marcos</a></li>
             </ul>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Creado por Alumno X para GitHub Pages</p>
+        <p>© 2026 León Tour - Diseñado con fines académicos por Alumno X</p>
     </footer>
 
 </body>
